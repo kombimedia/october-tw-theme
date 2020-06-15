@@ -1,0 +1,7 @@
+name: 'October TW'
+description: 'A child theme of Bakerdev''s Zenii theme. A flat landing page theme using Tailwindcss - with PostCSS,  PostCSS Nested, PostCSS Import, Autoprefixer and PurgeCSS.'
+author: Responsive
+homepage: 'https://responsiveweb.nz'
+code: ''
+previewImage: assets/dist/images/preview.jpg
+form: fields.yaml

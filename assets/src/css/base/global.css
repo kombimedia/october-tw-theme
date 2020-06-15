@@ -1,0 +1,9 @@
+.disable-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.stripe-loading-indicator .stripe,
+.stripe-loading-indicator .stripe-loaded {
+  @apply bg-primary !important;
+}

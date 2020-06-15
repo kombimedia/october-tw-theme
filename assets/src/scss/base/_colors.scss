@@ -1,0 +1,60 @@
+/* Override Tailwinds colors */
+.text-primary {
+    color: $override-color-primary;
+}
+
+.text-secondary {
+    color: $override-color-secondary;
+}
+
+.text-tertiary {
+    color: $override-color-tertiary;
+}
+
+.text-text {
+    color: $override-color-text;
+}
+
+.text-error {
+    color: $override-color-error;
+}
+
+.bg-primary {
+    background-color: $override-color-primary;
+}
+
+.bg-secondary {
+    background-color: $override-color-secondary;
+}
+
+.bg-tertiary {
+    background-color: $override-color-tertiary;
+}
+
+.bg-text {
+    background-color: $override-color-text;
+}
+
+.bg-error {
+    background-color: $override-color-error;
+}
+
+.hover\:text-primary:hover {
+    color: $override-color-primary;
+}
+
+.hover\:text-secondary:hover {
+    color: $override-color-secondary;
+}
+
+.hover\:text-tertiary:hover {
+    color: $override-color-tertiary;
+}
+
+.hover\:text-text:hover {
+    color: $override-color-text;
+}
+
+.hover\:text-error:hover {
+    color: $override-color-error;
+}

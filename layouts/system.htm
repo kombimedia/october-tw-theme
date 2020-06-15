@@ -1,0 +1,28 @@
+description = "Blank layout for system pages"
+
+[seoTags]
+==
+<!doctype html>
+<html lang="en">
+    <head>
+
+        {% partial 'site/meta' %}
+        
+        {% component 'seoTags' %}
+
+        {% component 'seoTags' %}
+
+        {% partial 'site/head-links' %}
+
+        {% styles %}
+
+    </head>
+    
+    <body class="font-body">
+    
+    {% page %}
+
+    {% partial 'site/scripts' %}
+    
+    </body>
+</html>

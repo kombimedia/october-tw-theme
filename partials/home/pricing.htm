@@ -1,0 +1,25 @@
+{% if this.theme.pricing_title or this.theme.pricing_plans|length > 0 %}
+<section id="pricing" class="section bg-gray-100">
+    <div class="container mx-auto">
+        {% if this.theme.pricing_title %}<h2 class="section__title text-center mb-16" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.pricing_title }}</h2>{% endif %}
+        <div class="flex flex-col justify-center md:flex-row">
+            {% if (this.theme.pricing_plans|length > 0) %}
+                {% for plan in this.theme.pricing_plans %}
+                    <div class="flex flex-col justify-between bg-white rounded shadow-md mx-6 px-12 py-8 text-center mb-6 {{ plan.highlighted ? 'bg-primary text-white shadow-xl' }}" data-sal="fade" data-sal-easing="ease-in-cubic" data-sal-duration="400">
+                        <div>
+                            <h3 class="font-bold uppercase mb-4">{{ plan.plan_title }}</h3>
+                            <p class="mb-2"><span class="{{ plan.highlighted ? 'text-white' : 'text-primary' }}">{{ plan.currency }}</span><span class="font-bold text-5xl {{ plan.highlighted ? 'text-white' : 'text-primary' }}">{{ plan.price }}</span>/{{ plan.plan_type }}</p>
+                            <ul class="mb-8">
+                                {% for feature in plan.plan_features|split(',') %}
+                                    <li>{{ feature }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <a href="{{ plan.button_url }}" class="btn {{ plan.highlighted ? '': 'btn-primary'}}">{{ plan.button_text }}</a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}

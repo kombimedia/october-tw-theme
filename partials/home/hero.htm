@@ -1,0 +1,16 @@
+{% if this.theme.hero_title or this.theme.hero_subtitle or this.theme.hero_description %}
+<section class="container section mx-auto">
+    <div class="flex items-center w-full text-center md:w-1/2 md:text-left">
+        <div>
+            <h2 class="font-bold text-5xl" data-sal="fade">{{ this.theme.hero_title }}</h2>
+            <p class="text-2xl" data-sal="fade" data-sal-delay="100">{{ this.theme.hero_subtitle }}</p>
+            <p class="w-full mt-2 md:w-3/4" data-sal="fade" data-sal-delay="200">{{ this.theme.hero_description }}</p>
+            <div class="mt-8" data-sal="fade" data-sal-delay="300">
+                <a href="#" class="btn btn-primary">{{ this.theme.hero_button_text }}</a></div>
+            </div>
+    </div>
+    <div class="w-full pt-16 md:w-1/2 md:pt-0">
+        <img src="{{ this.theme.hero_image ? this.theme.hero_image|media|resize(476, null, { mode: 'auto', quality: '60' }) : 'assets/dist/images/hero.svg'|theme }}" class="mx-auto rounded-md" alt="{{ this.theme.website_name }} Hero Image" data-sal="slide-right" data-sal-delay="400" data-sal-duration="500">
+    </div>
+</section>
+{% endif %}

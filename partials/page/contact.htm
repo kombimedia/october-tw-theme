@@ -1,0 +1,15 @@
+[viewBag]
+==
+{% if this.theme.contact_title  or this.theme.contact_description %}
+<section id="contact" class="container section mx-auto">
+    <div class="w-full md:w-1/2">
+        <h2 class="section__title" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.contact_title }}</h2>
+        <p class="mb-4 w-full md:w-3/4" data-sal="slide-up" data-sal-easing="ease-in-cubic">{{ this.theme.contact_description }}</p>
+        {% component 'contactForm' %}
+    </div>
+
+    <div class="hidden w-full md:block md:w-1/2">
+        <img src="{{ this.theme.contact_image ? this.theme.contact_image|media : 'assets/dist/images/contact.svg'|theme }}" class="mx-auto" alt="{{ this.theme.contact_title }} {{ this.theme.contact_description }} Contact Image" data-sal="slide-up" data-sal-delay="400" data-sal-duration="500">
+    </div>
+</section>
+{% endif %}

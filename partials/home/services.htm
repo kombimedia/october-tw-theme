@@ -1,0 +1,21 @@
+{% if this.theme.service_title or this.theme.services|length > 0 %}
+<section id="services" class="container section mx-auto">
+    <div>
+        {% if this.theme.service_title %}<h2 class="section__title text-center mb-16" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.service_title }}</h2>{% endif %}
+        <div class="grid row-gap-16 grid-cols-1 md:grid-cols-2">
+            {% if this.theme.services|length > 0 %}
+                {% for service in this.theme.services %}
+                    {% set index = loop.index %}
+                    {% set position = index % 2 ? 'md:w-1/2 md:ml-auto md:mr-24': 'md:w-1/2 md:mr-auto md:ml-24'  %}
+                    {% set default_image = 'assets/dist/images/service'~index~'.svg' %}
+                    <div class="text-center w-full {{ position }}" data-sal="fade" data-sal-easing="ease-in-cubic">
+                        <img src="{{ service.image ? service.image|media : default_image | theme }}" class="mx-auto mb-4" alt="{{ this.theme.website_name }} {{ service.title }}">
+                        <h3 class="font-bold text-2xl mb-4 text-primary">{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}
