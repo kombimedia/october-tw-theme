@@ -1,0 +1,35 @@
+description = "Default layout"
+
+[seoTags]
+==
+<!doctype html>
+<html lang="en">
+    <head>
+
+        {% partial 'site/meta' %}
+
+        {% component 'seoTags' %}
+
+        {% partial 'site/head-links' %}
+
+        {% styles %}
+
+    </head>
+    <body class="font-body">
+        <div class="wrapper overflow-hidden">
+
+            {% partial 'site/header' %}
+
+            {% page %}
+
+            {% partial 'site/footer' %}
+        </div>
+
+    {% partial 'site/scripts' %}
+
+    {% framework extras %}
+
+    {% scripts %}
+
+    </body>
+</html>

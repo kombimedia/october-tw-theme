@@ -16,8 +16,10 @@ items:
         title: About
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: about-us
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -27,8 +29,10 @@ items:
         title: Services
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: our-services
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -37,18 +41,26 @@ items:
         items:
             -
                 title: 'Service 1'
+                nesting: ''
                 type: url
                 url: /
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
                     isExternal: '0'
             -
                 title: 'Service 2'
+                nesting: ''
                 type: url
                 url: /
                 code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
                 viewBag:
                     isHidden: '0'
                     cssClass: ''
@@ -57,9 +69,20 @@ items:
         title: Pricing
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: pricing
+        cmsPage: ''
         replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Blog
+        type: cms-page
+        code: ''
+        reference: blog/blog
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -68,8 +91,10 @@ items:
         title: Contact
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: contact-us
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

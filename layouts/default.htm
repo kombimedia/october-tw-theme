@@ -49,15 +49,23 @@ default = 0
     </head>
     <body class="font-body">
         <div class="wrapper overflow-hidden">
-            <h1 class="hidden">{{ this.page.title }}</h1>
 
             {% partial 'site/header' %}
 
-            {% page %}
+            <div class="container mx-auto">
 
-            {% if page.title == "Contact Us" %}
-            {% partial 'page/contact' %}
-            {% endif %}
+                <section class="section">
+                    <h1 class="text-5xl font-bold">{{ this.page.title }}</h1>
+                </section>
+
+
+                {% page %}
+
+                {% if page.title == "Contact Us" %}
+                {% partial 'page/contact' %}
+                {% endif %}
+            </div>
+
 
             {% partial 'site/footer' %}
         </div>
