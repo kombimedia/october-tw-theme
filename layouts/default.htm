@@ -54,9 +54,11 @@ default = 0
 
             <div class="container py-20">
 
-                <h1 class="text-5xl font-bold text-center">{{ this.page.title }}</h1>
+                <h1 class="text-center">{{ this.page.title }}</h1>
 
-                {% page %}
+                  <div class="max-w-7xl mx-auto">
+                    {% page %}
+                  </div>
 
                 {% if page.title == "Contact Us" %}
                 {% partial 'page/contact' %}

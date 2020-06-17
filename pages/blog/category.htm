@@ -1,6 +1,6 @@
 title = "Blog Category"
 url = "/blog/category/:slug"
-layout = "default"
+layout = "blog"
 description = "View posts by category"
 is_hidden = 0
 robot_index = "index"
@@ -30,6 +30,8 @@ categoryPage = "blog/category"
   </div>
 
   <div class="relative max-w-7xl mx-auto">
+
+    <h1 class="text-center">{{ this.page.title }}</h1>
 
     <div class="text-center">
       <p class="max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
@@ -77,7 +79,7 @@ categoryPage = "blog/category"
             </p>
             <a href="{{ post.url }}" class="block">
               <!-- Title -->
-              <h3 class="mt-2 text-xl leading-7 font-semibold text-text">
+              <h3 class="mt-2">
                 {{ post.title }}
               </h3>
               <!-- Excerpt -->
