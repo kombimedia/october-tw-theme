@@ -1,6 +1,6 @@
 {% if this.theme.about_title or this.theme.about_description or this.theme.about_items|length > 0 %}
 <section id="about" class="bg-gray-100">
-    <div class="container section mx-auto">
+    <div class="container section">
         <div class="w-full md:w-1/2 md:order-2">
             {% if this.theme.about_title %}<h2 class="section__title" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.about_title }}</h2>{% endif %}
             <p data-sal="slide-up" data-sal-easing="ease-in-cubic" data-sal-delay="100">{{ this.theme.about_description }}</p>

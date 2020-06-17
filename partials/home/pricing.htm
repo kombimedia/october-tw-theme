@@ -1,6 +1,6 @@
 {% if this.theme.pricing_title or this.theme.pricing_plans|length > 0 %}
 <section id="pricing" class="section bg-gray-100">
-    <div class="container mx-auto">
+    <div class="container">
         {% if this.theme.pricing_title %}<h2 class="section__title text-center mb-16" data-sal="fade" data-sal-easing="ease-in-cubic">{{ this.theme.pricing_title }}</h2>{% endif %}
         <div class="flex flex-col justify-center md:flex-row">
             {% if (this.theme.pricing_plans|length > 0) %}

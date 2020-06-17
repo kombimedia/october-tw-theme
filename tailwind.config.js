@@ -14,7 +14,11 @@ module.exports = {
                 'body': ['Roboto','sans-serif'],
                 'display': ['Rubik', 'Roboto', 'sans-serif']
             }
-        }
+        },
+        container: {
+            center: true,
+            padding: '1rem'
+        },
     },
     plugins: [
         require('@tailwindcss/ui')({
