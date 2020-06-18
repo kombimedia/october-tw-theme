@@ -28,13 +28,13 @@ function onEnd() {
 
     <h1 class="text-center">{{ this.page.title }}</h1>
 
-    <div class="">{{ post.content_html|raw }}</div>
-
     {% if post.custom_fields.featured_image %}
-        <div class="mt-12 text-center w-full">
+        <div class="mt-16 text-center w-full">
             <img src="{{ post.custom_fields.featured_image|media | resize(1280, 500, { mode: 'crop', quality: '60', extension: 'jpg' }) }}" alt="{{ post.custom_fields.featured_image_title }}, {{ post.custom_fields.featured_image_alt }}"/>
         </div>
     {% endif %}
+
+    <div class="mt-16 px-6 py-6 bg-white rounded-lg shadow-lg overflow-hidden">{{ post.content_html|raw }}</div>
 
     <p class="mt-8 text-sm leading-5 font-medium text-gray-500">
         Posted
@@ -49,3 +49,7 @@ function onEnd() {
   </div>
 
 </div>
+
+{% put styles %}
+<!-- <link href="/plugins/reazzon/gutenberg/assets/laraberg.min.css" rel="stylesheet"> -->
+{% endput %}

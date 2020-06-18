@@ -31,7 +31,7 @@
 
 /* form validation */
 .error-message {
-  @apply hidden;
+  display: none;
 }
 
 .input-group.has-error .error-message {
