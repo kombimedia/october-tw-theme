@@ -1,5 +1,5 @@
 title = "Blog"
-url = "/blog"
+url = "/blog/:page?"
 layout = "blog"
 is_hidden = 0
 robot_index = "index"
@@ -8,7 +8,7 @@ robot_follow = "follow"
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"
-postsPerPage = 10
+postsPerPage = 9
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -96,5 +96,6 @@ categoryPage = "blog/category"
     </div>
   </div>
 </div>
-
-{% partial 'page/pagination' %}
+<div class="bg-gray-100 pb-6 px-6">
+  {% partial 'page/pagination' %}
+</div>

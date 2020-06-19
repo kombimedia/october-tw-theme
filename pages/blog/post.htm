@@ -26,30 +26,28 @@ function onEnd() {
 
   <div class="relative max-w-7xl mx-auto">
 
-    <h1 class="text-center">{{ this.page.title }}</h1>
-
     {% if post.custom_fields.featured_image %}
-        <div class="mt-16 text-center w-full">
-            <img src="{{ post.custom_fields.featured_image|media | resize(1280, 500, { mode: 'crop', quality: '60', extension: 'jpg' }) }}" alt="{{ post.custom_fields.featured_image_title }}, {{ post.custom_fields.featured_image_alt }}"/>
-        </div>
+    <div class="w-full rounded-t-lg overflow-hidden">
+        <img src="{{ post.custom_fields.featured_image|media | resize(1280, 500, { mode: 'crop', quality: '60', extension: 'jpg' }) }}" alt="{{ post.custom_fields.featured_image_title }}, {{ post.custom_fields.featured_image_alt }}"/>
+    </div>
     {% endif %}
 
-    <div class="mt-16 px-6 py-6 bg-white rounded-lg shadow-lg overflow-hidden">{{ post.content_html|raw }}</div>
+    <div class="pt-12 pb-8 px-8 bg-white rounded-lg rounded-t-none shadow-lg overflow-hidden">
+        <h1>{{ this.page.title }}</h1>
 
-    <p class="mt-8 text-sm leading-5 font-medium text-gray-500">
-        Posted
-        {% if post.categories.count %} in
-            {% for category in post.categories %}
-                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-        {% endif %}
-        on {{ post.published_at|date('M d, Y') }}
-    </p>
+        {{ post.content_html|raw }}
+
+        <p class="mt-8 text-sm leading-5 font-medium text-gray-500">
+            Posted
+            {% if post.categories.count %} in
+                {% for category in post.categories %}
+                    <a class="text-primary hover:underline" href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            {% endif %}
+            on {{ post.published_at|date('M d, Y') }}
+        </p>
+    </div>
 
   </div>
 
 </div>
-
-{% put styles %}
-<!-- <link href="/plugins/reazzon/gutenberg/assets/laraberg.min.css" rel="stylesheet"> -->
-{% endput %}
