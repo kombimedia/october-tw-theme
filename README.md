@@ -1,5 +1,5 @@
 # Responsive Tailwind Theme
-A flat landing page theme for OctoberCMS built using Tailwindcss, based in Zenii Theme.
+A flat landing page theme for OctoberCMS built using Tailwindcss, based on Zenii Theme.
 
 ## Features
 - Responsive
