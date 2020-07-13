@@ -41,6 +41,7 @@
 }
 
 .is-active {
+    @apply text-tertiary;
 
         &::after {
             bottom: -16px;
