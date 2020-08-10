@@ -1281,6 +1281,12 @@ h5 {
     color: rgba(52, 69, 79, var(--text-opacity));
   }
 
+.is-active {
+  --text-opacity: 1;
+  color: #34454f;
+  color: rgba(52, 69, 79, var(--text-opacity));
+}
+
 .is-active::after {
     bottom: -16px;
     content: '';
@@ -40066,8 +40072,6 @@ h5 {
 .glider-next:focus {
   color: #8C87E6;
 }
-
-/*@import "gutenberg.css";*/
 
 /*@import "fontawesome.css";*/
 
